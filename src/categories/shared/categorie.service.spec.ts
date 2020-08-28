@@ -32,5 +32,8 @@ describe('CategorieService', () => {
     it('should be defined', () => {
         expect(provider).toBeDefined();
     });
+    it('should be defined', () => {
+        expect(repository).toBeDefined();
+    });
 
 });
