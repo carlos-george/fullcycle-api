@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { Categorie } from './categorie';
 import { InjectRepository } from '@nestjs/typeorm';
 import { CategorieEntity } from '../../models/categorie.entity';
 import { Repository } from 'typeorm';
+import { CategorieDTO } from './categorie.dto';
 
 @Injectable()
 export class CategorieService {
@@ -16,7 +16,7 @@ export class CategorieService {
         return this.categorieRepo.find();
     }
 
-    create(categorie: Categorie) {
+    create(categorie: CategorieDTO) {
 
         let cat: CategorieEntity = new CategorieEntity();
 
