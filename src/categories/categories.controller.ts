@@ -1,6 +1,6 @@
 import { Controller, Get, Post, Body } from '@nestjs/common';
 import { CategorieService } from './shared/categorie.service';
-import { Categorie } from './shared/categorie';
+import { CategorieDTO } from './shared/categorie.dto';
 
 @Controller('categories')
 export class CategoriesController {
@@ -10,12 +10,12 @@ export class CategoriesController {
     }
 
     @Get()
-    async getAll(): Promise<Categorie[]> {
+    async getAll(): Promise<CategorieDTO[]> {
         return this.categorieService.getAll();
     }
 
     @Post()
-    async create(@Body() categorie: Categorie): Promise<Categorie> {
+    async create(@Body() categorie: CategorieDTO): Promise<CategorieDTO> {
         return this.categorieService.create(categorie);
     }
 

@@ -1,4 +1,4 @@
-export class Categorie {
+export class CategorieDTO {
     id: number;
     description: string;
 

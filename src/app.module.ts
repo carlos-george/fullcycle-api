@@ -10,7 +10,6 @@ import { CategoriesModule } from './categories/categories.module';
     CategoriesModule,
     TypeOrmModule.forRoot({
       type: 'sqlite',
-      // database: './sqlite/db',
       database: './src/config/database/db',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
