@@ -1,1 +1,1 @@
-testando;
+testando execução dos testes;
